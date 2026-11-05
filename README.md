@@ -158,8 +158,6 @@ Relational tables included:
 
 **Md Yasar**
 
-- LinkedIn: *(Add your profile link)*
-- GitHub: *(Add your GitHub profile link)*
 
 ---
 
