@@ -1,8 +1,8 @@
-# 📊 Olist E-Commerce Analytics Dashboard
+# 📊 Olist E-Commerce Data Analytics & Customer Intelligence
 
-A complete end-to-end Data Analytics project built using **Python**, **Power BI**, and **Machine Learning** on the Brazilian Olist E-Commerce dataset.
+A comprehensive end-to-end Data Analytics project built using **Python** and **Machine Learning** on the Brazilian Olist E-Commerce dataset.
 
-This project demonstrates the entire analytics workflow—from data cleaning and preprocessing to exploratory data analysis, feature engineering, predictive modeling, and interactive dashboard creation.
+This project demonstrates the entire analytics workflow—from data cleaning and preprocessing to exploratory data analysis, feature engineering, RFM segmentation, cohort analysis, and predictive modeling.
 
 ---
 
@@ -10,13 +10,13 @@ This project demonstrates the entire analytics workflow—from data cleaning and
 
 The goal of this project is to analyze Olist's e-commerce data and uncover valuable business insights such as:
 
-- 📦 Order Performance
-- 💰 Sales Analysis
-- 👥 Customer Behavior
-- ⭐ Review Analysis
-- 🚚 Delivery Performance
-- 📍 Regional Sales Distribution
-- 🤖 Sales Prediction using Machine Learning
+- 📦 Order Performance & Fulfillment
+- 💰 Sales & Revenue Analysis
+- 👥 Customer Behavior & Retention (RFM & Cohorts)
+- ⭐ Review & Customer Satisfaction Drivers
+- 🚚 Delivery Performance & Delay Analysis
+- 📍 Regional & Geographic Sales Distribution
+- 🤖 Predictive Modeling using Machine Learning
 
 ---
 
@@ -24,17 +24,18 @@ The goal of this project is to analyze Olist's e-commerce data and uncover valua
 
 ```
 ├── data/
-│   ├── final_olist_dashboard.csv
-│   └── raw datasets
+│   ├── olist_customers_dataset.csv
+│   ├── olist_orders_dataset.csv
+│   ├── olist_order_items_dataset.csv
+│   ├── olist_order_payments_dataset.csv
+│   ├── olist_order_reviews_dataset.csv
+│   ├── olist_products_dataset.csv
+│   ├── olist_sellers_dataset.csv
+│   ├── olist_geolocation_dataset.csv
+│   └── product_category_name_translation.csv
 │
 ├── notebooks/
 │   └── olist_analysis.ipynb
-│
-├── dashboard/
-│   └── olist_dashboard.pbix
-│
-├── images/
-│   └── dashboard screenshots
 │
 ├── README.md
 └── requirements.txt
@@ -42,56 +43,41 @@ The goal of this project is to analyze Olist's e-commerce data and uncover valua
 
 ---
 
-## 📊 Dashboard Features
+## 📈 Key Analytics & Metrics Covered
 
-The Power BI dashboard includes:
-
-- Total Revenue
-- Total Orders
-- Average Order Value
-- Customer Count
-- Sales by State
-- Monthly Sales Trend
-- Top Product Categories
-- Delivery Performance
-- Customer Reviews Analysis
-- Payment Method Distribution
-- Interactive Filters & Slicers
+- **Revenue Metrics**: Total Revenue, Average Order Value (AOV), Monthly Revenue Trends
+- **Customer Metrics**: Unique Customers, Repeat Purchase Rate, Customer Retention Rate
+- **Customer Segmentation**: RFM Analysis (Recency, Frequency, Monetary)
+- **Cohort Analysis**: Tracking monthly customer acquisition and retention
+- **Operational Metrics**: Delivery Delays, Estimated vs. Actual Delivery Time
+- **Customer Satisfaction**: Review score distributions and correlation with delivery performance
+- **Funnel Analysis**: Order status progression across lifecycle stages
 
 ---
 
 ## 🛠️ Technologies Used
 
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- Scikit-learn
-- Jupyter Notebook
-- Power BI Desktop
+- **Python**
+- **Pandas** & **NumPy** for data manipulation and feature engineering
+- **Matplotlib** & **Seaborn** for exploratory data visualization
+- **Missingno** for missing data analysis
+- **Scikit-learn** for machine learning workflows
+- **Jupyter Notebook**
 
 ---
 
-## 📈 Machine Learning
+## 🤖 Machine Learning
 
-The project includes a Decision Tree model for prediction.
+The project includes predictive modeling (Decision Tree) to evaluate order outcomes and customer experience drivers.
 
 ### Workflow
 
-- Data Cleaning
-- Missing Value Handling
-- Feature Engineering
-- Label Encoding
+- Data Cleaning & Missing Value Imputation
+- Feature Engineering (Delivery Delay, Total Price, Order Timing)
+- Categorical Encoding
 - Train-Test Split
-- Decision Tree Classifier
-- Model Evaluation
-
-### Evaluation Metrics
-
-- Accuracy Score
-- Classification Report
-- Confusion Matrix
+- Decision Tree Classifier / Regressor
+- Model Evaluation (Accuracy, Classification Report, Confusion Matrix)
 
 ---
 
@@ -99,97 +85,72 @@ The project includes a Decision Tree model for prediction.
 
 Performed detailed analysis on:
 
-- Customer Distribution
-- Product Categories
-- Payment Types
-- Order Status
-- Monthly Revenue
-- Delivery Time
-- Customer Reviews
-- Seller Performance
+- Customer Distribution by State & City
+- Top & Bottom Performing Product Categories
+- Payment Method Distribution & Installment Patterns
+- Order Status Breakdown
+- Monthly Revenue Growth & Trends
+- Delivery Time Variance across Brazilian Regions
+- Review Scores and Impact of Late Delivery
+- Seller Performance & Contribution
 
 ---
 
-## 📸 Dashboard Preview
+## ⚙️ Installation & Usage
 
-> Add your Power BI dashboard screenshots here.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/yourusername/olist-ecommerce-analytics.git
+   ```
 
-Example:
+2. **Move into the project folder:**
+   ```bash
+   cd olist-ecommerce-analytics
+   ```
 
-```
-images/dashboard.png
-```
+3. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
----
-
-## ⚙️ Installation
-
-Clone the repository:
-
-```bash
-git clone https://github.com/yourusername/olist-ecommerce-analytics.git
-```
-
-Move into the project folder:
-
-```bash
-cd olist-ecommerce-analytics
-```
-
-Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-Run the notebook:
-
-```bash
-jupyter notebook
-```
+4. **Launch Jupyter Notebook:**
+   ```bash
+   jupyter notebook notebooks/olist_analysis.ipynb
+   ```
 
 ---
 
 ## 📁 Dataset
 
-Dataset used:
+Dataset used: **Brazilian E-Commerce Public Dataset by Olist**
 
-**Brazilian E-Commerce Public Dataset by Olist**
-
-Contains:
-
+Relational tables included:
 - Customers
 - Orders
-- Payments
-- Reviews
-- Sellers
+- Order Items
+- Order Payments
+- Order Reviews
 - Products
+- Sellers
 - Geolocation
+- Category Name Translation
 
 ---
 
-## 🎯 Business Insights
+## 🎯 Business Insights & Recommendations
 
-Some insights obtained include:
-
-- Revenue trends over time
-- Most profitable product categories
-- Customer purchasing behavior
-- Best performing states
-- Delivery efficiency
-- Customer satisfaction analysis
-- Payment preferences
+- **Delivery Delays**: Significant negative correlation between delivery delay and review scores; delays are heavily concentrated in specific logistics routes.
+- **Pareto Revenue Concentration**: High-value product categories and repeat buyers contribute disproportionately to total revenue.
+- **Retention Strategy**: Targeted retention programs are recommended for high-scoring RFM segments to improve customer lifetime value.
 
 ---
 
 ## 📌 Future Improvements
 
-- Deploy dashboard online
-- Sales forecasting
-- Customer segmentation
-- Recommendation system
-- Real-time dashboard updates
-- Deep Learning models
+- Sales forecasting using time-series models (ARIMA / Prophet)
+- Advanced customer segmentation with K-Means clustering
+- Product recommendation engine
+- Deep learning / NLP models for review comment sentiment analysis
 
 ---
 
@@ -197,16 +158,11 @@ Some insights obtained include:
 
 **Md Yasar**
 
-LinkedIn: *(Add your profile link)*
-
-GitHub: *(Add your GitHub profile link)*
+- LinkedIn: *(Add your profile link)*
+- GitHub: *(Add your GitHub profile link)*
 
 ---
 
 ## ⭐ If you like this project
 
 Please consider giving it a ⭐ on GitHub!
-
-It helps support future projects and motivates further development.
-
----
