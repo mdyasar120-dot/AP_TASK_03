@@ -1,4 +1,4 @@
-# 📊 Olist E-Commerce Data Analytics & Customer Intelligence
+# 📊 Olist E-Commerce Data Analytics
 
 A comprehensive end-to-end Data Analytics project built using **Python** and **Machine Learning** on the Brazilian Olist E-Commerce dataset.
 
